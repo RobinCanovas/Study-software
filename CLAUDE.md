@@ -109,8 +109,15 @@ tags column.
   heading detection for now; add bookmark detection only if page
   ranges become painful.
 - Source PDFs are LaTeX-generated with extractable text, no scans.
-  The automata handout uses Type 3 fonts: test `pdftotext` on it
-  before building anything, symbols may extract badly.
+- `pdftotext` tested on the automata handout (pandoc + xdvipdfmx,
+  no Type 3 fonts, all fonts have Unicode maps): prose and symbols
+  extract correctly as Unicode math letters (𝑄, 𝒜, 𝛿, Σ∗, ⟺).
+  Known losses:
+  - sub/superscripts are flattened: `𝑞𝑖+1` (q_{i+1}), `𝛿 ∗`, `𝑞 ′`;
+  - figures (automaton diagrams) vanish entirely, so exercises that
+    rely on a drawing lose their content;
+  - do NOT apply NFKC normalisation: it maps both 𝐴 (an automaton)
+    and 𝒜 (the alphabet) to plain `A`.
 - Chunk the PDF and only send what's needed.
 
 ### First milestone
