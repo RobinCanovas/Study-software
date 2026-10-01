@@ -20,3 +20,6 @@ dist/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+
+# Oral transcripts: personal, kept local
+transcripts/
