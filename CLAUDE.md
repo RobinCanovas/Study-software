@@ -30,6 +30,9 @@ I build this because I need it. It is not a portfolio piece.
   first commit.
 - Keep API costs low: I have limited credits. Chunk the PDF and only
   send what's needed.
+- Source PDFs live in `pdfs/`, which is git-ignored. Teachers' handouts
+  are not ours to publish; never commit them, never quote them at length
+  in committed files.
 - Must handle French course material — prompts and card content in
   French, code and comments in English.
 

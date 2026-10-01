@@ -3,7 +3,8 @@
 .env.*
 !.env.example
 
-# Course material and generated decks (copyrighted / personal, keep local)
+# Course material: teachers' handouts are not ours to publish. Keep them in pdfs/.
+pdfs/
 *.pdf
 !tests/fixtures/*.pdf
 out/
